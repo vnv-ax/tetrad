@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Тетрадь</title>
+    <meta name="description" content="Тетрадь. Цифровое убежище от гуглов, эплов, ии и прочих микрософтов">
+    <meta name="color-scheme" content="light dark">
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://huggingface.co https://*.huggingface.co https://*.hf.co; manifest-src 'self'; worker-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'">
+
+<link rel="manifest" href="manifest.json">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+
+<meta name="theme-color" content="#D6BFA3" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1E293B" media="(prefers-color-scheme: dark)">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<meta property="og:type" content="website">
+    <meta property="og:title" content="Тетрадь">
+    <meta property="og:description" content="Цифровое убежище от гуглов, эплов, яндексов и прочих микрософтов. Всё локально, без сервера.">
+    <meta property="og:image" content="https://t.wf.md/icons/icon-512.png">
+    <meta property="og:locale" content="ru_RU">
+
+<script src="js/theme-boot.js"></script>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/Literata-var-normal-cyrillic.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/YesevaOne-normal-400-cyrillic.woff2">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gost.css">
+    <link rel="apple-touch-icon" href="icons/apple-icon-180.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2064-2752.jpg" media="(device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2752-2064.jpg" media="(device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1668-2420.jpg" media="(device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2420-1668.jpg" media="(device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2388-1668.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1668-2224.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2224-1668.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1536-2048.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2048-1536.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1640-2360.jpg" media="(device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2360-1640.jpg" media="(device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1620-2160.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2160-1620.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1488-2266.jpg" media="(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2266-1488.jpg" media="(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1320-2868.jpg" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2868-1320.jpg" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1206-2622.jpg" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2622-1206.jpg" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1260-2736.jpg" media="(device-width: 420px) and (device-height: 912px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2736-1260.jpg" media="(device-width: 420px) and (device-height: 912px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1290-2796.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2796-1290.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1179-2556.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2556-1179.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1170-2532.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2532-1170.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1284-2778.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2778-1284.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1080-2340.jpg" media="(device-width: 360px) and (device-height: 780px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2340-1080.jpg" media="(device-width: 360px) and (device-height: 780px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1242-2688.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2688-1242.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1125-2436.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2436-1125.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-828-1792.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1792-828.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1242-2208.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2208-1242.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-750-1334.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-640-1136.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+  </head>
+  <body>
+    <div class="boot" id="boot" role="status" aria-live="polite">
+      <div class="boot-inner">
+        <span class="boot-title">Тетрадь</span>
+        <span class="boot-line" aria-hidden="true"></span>
+        <span class="boot-word">Загрузка</span>
+      </div>
+    </div>
+    <noscript>
+      <div class="noscript-note">
+        «Тетрадь» работает прямо в браузере — для этого нужен JavaScript.
+        Включите его и обновите страницу.
+      </div>
+    </noscript>
+    <div class="app" id="app" data-room="office">
+      <nav class="spine" id="spine" aria-label="Комнаты кабинета">
+        <div class="spine-doors" role="group" aria-label="Комнаты">
+          <button type="button" class="door" data-tab="office" data-tip="Работа с текстом">
+            <span class="door-ico" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256" fill="currentColor"><path d="M34.34 50.34A8 8 0 0 0 40 64H216A8 8 0 0 0 219.06 48.61A8 8 0 0 0 216 48H40A8 8 0 0 0 34.34 50.34ZM34.34 98.34A8 8 0 0 0 40 112H216A8 8 0 0 0 219.06 96.61A8 8 0 0 0 216 96H40A8 8 0 0 0 34.34 98.34ZM34.34 146.34A8 8 0 0 0 40 160H216A8 8 0 0 0 219.06 144.61A8 8 0 0 0 216 144H40A8 8 0 0 0 34.34 146.34ZM34.34 194.34A8 8 0 0 0 40 208H216A8 8 0 0 0 219.06 192.61A8 8 0 0 0 216 192H40A8 8 0 0 0 34.34 194.34Z"></path></svg>
+            </span>
+            <span class="door-name">Кабинет</span>
+          </button>
+          <button type="button" class="door" data-tab="scan" data-tip="Документы">
+            <span class="door-ico" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256" fill="currentColor"><path d="M31.03 71.03A24 24 0 0 0 24 88V192A24 24 0 0 0 48 216H130A8 8 0 0 0 133.06 200.61A8 8 0 0 0 130 200H48A8 8 0 0 1 40 192V132H216V138A8 8 0 0 0 231.39 141.06A8 8 0 0 0 232 138V88A24 24 0 0 0 208 64H176V56A24 24 0 0 0 152 32H104A24 24 0 0 0 80 56V64H48A24 24 0 0 0 31.03 71.03ZM96 56A8 8 0 0 1 104 48H152A8 8 0 0 1 160 56V64H96V56ZM213.66 82.34A8 8 0 0 1 216 88V116H40V88A8 8 0 0 1 48 80H208A8 8 0 0 1 213.66 82.34ZM192 148A8 8 0 0 0 186.34 161.66L192.69 168H180A32 32 0 0 0 148 200V212A8 8 0 0 0 163.39 215.06A8 8 0 0 0 164 212V200A16 16 0 0 1 180 184H192.69L186.34 190.34A8 8 0 0 0 195.06 203.39A8 8 0 0 0 197.66 201.66L217.66 181.66A8 8 0 0 0 217.66 170.34L197.66 150.34A8 8 0 0 0 192 148Z"></path></svg>
+            </span>
+            <span class="door-name">Приёмная</span>
+          </button>
+        </div>
+        <div class="spine-spacer"></div>
+        <button type="button" class="door door-foot" id="btnCharity" data-tip="Информация о приложении">
+          <span class="door-name">Автор</span>
+        </button>
+      </nav>
+      <div class="sb-backdrop" id="sbBackdrop" hidden=""></div>
+      <div class="workspace">
+        <header class="crown">
+          <button type="button" class="crown-btn" id="btnSidebar" aria-label="Стена" data-tip="Спрятать/показать">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256" fill="currentColor">
+              <path d="M60.12 60.12A96 96 0 0 0 32 128V200.92A22.66 22.66 0 0 0 55.08 224H200.92A22.66 22.66 0 0 0 224 200.92V55.08A22.66 22.66 0 0 0 200.92 32H128A96 96 0 0 0 60.12 60.12ZM201.18 48A6.67 6.67 0 0 1 208 54.82A7.99 7.99 0 0 0 208 55V201A7 7 0 0 1 201 208H55A7 7 0 0 1 48 201V128Q48 94.86 71.43 71.43Q94.86 48 128 48H201A8 8 0 0 0 201.18 48Z"></path>
+            </svg>
+          </button>
+          <div class="crown-id menu-wrap">
+            <span class="crown-room" id="crumbBoard" data-tip="Нажмите, чтобы выбрать цветовой формат">Кабинет</span>
+          </div>
+          <div class="menu-wrap crown-shades">
+            <div id="shadeMenu" class="pop-shade" hidden="">
+              <div id="shadeGrid" class="shade-grid"></div>
+            </div>
+          </div>
+          <div class="crown-spacer"></div>
+          <div class="clock" id="clock">
+            <b class="clock-time" id="clockTime">--:--</b>
+            <span class="clock-sub"><i id="clockWd">—</i><i class="clock-dot" aria-hidden="true">·</i><i id="clockDt">—</i></span>
+          </div>
+          <div class="menu-wrap">
+            <button type="button" class="crown-btn" id="opsBtn" aria-label="Все операции" data-tip="Операции">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 8h9M19.5 8H20M4 16h5M13.5 16H20"></path>
+                <circle cx="16" cy="8" r="2"></circle>
+                <circle cx="10.5" cy="16" r="2"></circle>
+              </svg>
+            </button>
+            <div id="opsMenu" class="pop pop-ops" hidden="">
+              <p class="pop-label">Действия</p>
+              <button type="button" class="pop-item" data-action="print">Печать</button>
+              <button type="button" class="pop-item" data-action="export">Выгрузить…</button>
+              <div id="exportFormats" class="pop-sub" hidden="">
+                <button type="button" class="pop-item pop-subitem" data-format="txt">Текст · .txt</button>
+                <button type="button" class="pop-item pop-subitem" data-format="docx">Word · .docx</button>
+                <button type="button" class="pop-item pop-subitem" data-format="pdf">PDF · .pdf</button>
+                <button type="button" class="pop-item pop-subitem" data-format="md">Markdown · .md</button>
+              </div>
+              <button type="button" class="pop-item" data-action="autosave">Автосохран</button>
+              <button type="button" class="pop-item" data-action="snaps">Восстановление</button>
+              <button type="button" class="pop-item" data-action="controls">Управление</button>
+              <button type="button" class="pop-item" data-action="offline">Офлайн-режим</button>
+              <div id="opsList"></div>
+            </div>
+          </div>
+        </header>
+        <div class="roomzone">
+          <section id="office" data-section="" class="room">
+            <div class="desk">
+              <article class="sheet" aria-label="Лист с текстом">
+                <div class="sheet-scroll scrolly" id="editorScroll">
+                  <div id="editor" aria-label="Текст" role="textbox" aria-multiline="true"></div>
+                </div>
+              </article>
+            </div>
+          </section>
+          <section id="scan" data-section="" hidden="" class="room">
+            <div class="desk desk-scan">
+              <article class="paper paper-files" id="appFiles" hidden="">
+                <header class="paper-head">
+                  <h2 class="paper-title">Файлы приложения</h2>
+                  <span class="paper-note" id="filesNote">папка data\docs</span>
+                </header>
+                <div class="paper-body scrolly">
+                  <div id="docsList" class="docs-list"></div>
+                  <p class="slip-note" id="docsEmpty" hidden="">Папка пуста — положите .txt или .md в data\docs на флешке</p>
+                </div>
+              </article>
+              <article class="paper paper-intake">
+                <header class="paper-head">
+                  <h2 class="paper-title">Документы</h2>
+                  <span class="paper-note">PDF · JPG · PNG · WEBP</span>
+                </header>
+                <div class="paper-body scrolly">
+                  <div class="drop-zone" id="dropZone" tabindex="0" role="button" aria-label="Загрузить файл">
+                    <div class="dz-star" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 4.5v9"></path>
+                        <path d="m8.2 10.2 3.8 3.8 3.8-3.8"></path>
+                        <path d="M5.5 19.5h13"></path>
+                      </svg>
+                    </div>
+                    <p class="dz-title"></p>
+                    <p class="dz-hint"><kbd>Контроль+м</kbd></p>
+                    <input type="file" id="fileInput" accept="image/*,.pdf,application/pdf" hidden="">
+                  </div>
+                  <div class="scan-controls">
+                    <label class="check">
+                      <span class="sub-note">Язык:</span>
+                      <select id="langSelect" class="select">
+                        <option value="ru">Русский</option>
+                        <option value="en">Английский</option>
+                        <option value="multi">Другой</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div id="previewWrap" class="preview-wrap" hidden="">
+                    <img id="previewImg" alt="Загруженное изображение">
+                  </div>
+                  <div id="ocrStatus" class="status-line" hidden=""></div>
+                  <div id="dlProgress" class="progress" hidden="">
+                    <div class="progress-bar" id="dlBar"></div>
+                    <span class="progress-text" id="dlText"></span>
+                  </div>
+                </div>
+              </article>
+              <article class="paper paper-out">
+                <header class="paper-head">
+                  <h2 class="paper-title">Распознанный текст</h2>
+                  <div class="paper-tools">
+                    <button id="btnOcrToOffice" type="button" class="chip-btn" data-tip="Передать в кабинет">→ В редактор</button>
+                    <button id="btnOcrCopy" type="button" class="chip-btn" data-tip="Скопировать">Скопировать</button>
+                    <button id="btnOcrDownload" type="button" class="chip-btn" data-tip="Скачать файлом">Скачать</button>
+                  </div>
+                </header>
+                <div class="paper-fill">
+                  <textarea id="ocrResult" class="note-area scrolly" spellcheck="false" placeholder="Здесь появится распознанный текст…" readonly=""></textarea>
+                </div>
+                <footer class="paper-foot">
+                  <span class="paper-note" id="ocrMeta">ДВИЖОК НЕ ЗАПУЩЕН</span>
+                  <span class="paper-spacer"></span>
+                  <button id="btnOcrClear" type="button" class="chip-btn">Очистить</button>
+                </footer>
+              </article>
+              <article class="paper paper-gost">
+                <header class="paper-head">
+                  <h2 class="paper-title">Подготовка документа</h2>
+                  <span class="paper-note">ГОСТ Р 7.0.97-2025</span>
+                </header>
+                <div class="paper-fill">
+                  <textarea id="prepText" class="note-area scrolly" spellcheck="true" placeholder="Введите или вставьте только содержание документа"></textarea>
+                </div>
+                <footer class="paper-foot">
+                  <span class="paper-note" id="prepSaveInfo">ЧЕРНОВИК СОХРАНИТСЯ САМ</span>
+                  <span class="paper-spacer"></span>
+                  <button id="btnPrepClear" type="button" class="chip-btn">Очистить</button>
+                  <button type="button" class="gost-btn" data-gost-open>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v14H6zM14 3.5V9h5.5M9 13h6v1.5H9zM9 16h6v1.5H9z"/></svg>
+                    В конструктор
+                  </button>
+                </footer>
+              </article>
+            </div>
+          </section>
+          <aside class="margin" id="margin" aria-label="Закладки с инструментами">
+            <div class="pins" role="group" aria-label="Инструменты">
+              <button type="button" class="pin" data-slip="plan" data-tip="План" aria-label="План">
+                <span class="pin-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="4.5" cy="6" r="1"></circle>
+                    <circle cx="4.5" cy="12" r="1"></circle>
+                    <circle cx="4.5" cy="18" r="1"></circle>
+                    <path d="M9 6h11M9 12h11M9 18h11"></path>
+                  </svg>
+                </span>
+              </button>
+              <button type="button" class="pin" data-slip="boxes" data-tip="Записи" aria-label="Записи">
+                <span class="pin-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3.5" y="5" width="17" height="14" rx="1.5"></rect>
+                    <path d="M3.5 10h17"></path>
+                  </svg>
+                </span>
+              </button>
+              <button type="button" class="pin" data-slip="voice" data-tip="Диктовка" aria-label="Диктовка">
+                <span class="pin-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9.25" y="3" width="5.5" height="10.5" rx="2.75"></rect>
+                    <path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3"></path>
+                  </svg>
+                </span>
+              </button>
+              <button type="button" class="pin" data-slip="info" data-tip="Инфо" aria-label="Инфо">
+                <span class="pin-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="8.5"></circle>
+                    <path d="M12 11.2V16"></path>
+                    <circle cx="12" cy="8" r="0.9" fill="currentColor" stroke="none"></circle>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <div class="slips">
+              <section class="slip" id="slip-info" hidden="">
+                <header class="slip-head">
+                  <h2 class="slip-title">Инфо</h2>
+                  <div class="slip-tools">
+                    <div class="seg" role="group" aria-label="Режим статистики">
+                      <button type="button" class="seg-btn active" id="statsModeFull">Полная</button>
+                      <button type="button" class="seg-btn" id="statsModeBrief">Краткая</button>
+                    </div>
+                    <div class="menu-wrap">
+                      <button type="button" class="chip-btn" id="statsPick" data-tip="Выбрать три показателя" hidden="">выбор…</button>
+                      <div id="statsPop" class="pop pop-stats" hidden=""></div>
+                    </div>
+                  </div>
+                </header>
+                <div class="slip-body">
+                  <span class="box-label">Документ</span>
+                  <div class="stat-grid">
+                    <span class="stat" data-k="stChars" data-tip="Символы"><b id="stChars">0</b><i>символы</i></span>
+                    <span class="stat" data-k="stCharsNS" data-tip="Символы без пробелов"><b id="stCharsNS">0</b><i>без пробелов</i></span>
+                    <span class="stat" data-k="stWords" data-tip="Слова"><b id="stWords">0</b><i>слова</i></span>
+                    <span class="stat" data-k="stSent" data-tip="Предложения"><b id="stSent">0</b><i>предложения</i></span>
+                    <span class="stat" data-k="stLines" data-tip="Строки"><b id="stLines">0</b><i>строки</i></span>
+                    <span class="stat" data-k="stUnique" data-tip="Уникальные слова"><b id="stUnique">0</b><i>уникальные</i></span>
+                    <span class="stat" data-k="stRead" data-tip="Время чтения, мин"><b id="stRead">0</b><i>чтение, мин</i></span>
+                    <span class="stat" data-k="stSpeak" data-tip="Время речи, мин"><b id="stSpeak">0</b><i>речь, мин</i></span>
+                    <span class="stat" data-k="stTokens" data-tip="≈ токены для нейросетей"><b id="stTokens">0</b><i>токены</i></span>
+                  </div>
+                  <div class="info-row">
+                    <span class="box-label">Читаемость</span>
+                    <label class="check check-sm"><input type="checkbox" id="chkReadAuto" checked=""><span class="box" aria-hidden="true"></span><span>авто</span></label>
+                  </div>
+                  <p class="slip-note" id="readInfo">Оценка текста</p>
+                  <div id="readOut" class="read-line" hidden=""></div>
+                </div>
+              </section>
+              <section class="slip" id="slip-plan" hidden="">
+                <header class="slip-head">
+                  <h2 class="slip-title">План, тезисы</h2>
+                </header>
+                <div class="slip-fill">
+                  <textarea id="planText" class="note-area scrolly" spellcheck="false" placeholder="Пишите план, тезисы и заметки — они хранятся отдельно от документа"></textarea>
+                </div>
+              </section>
+              <section class="slip" id="slip-voice" hidden="">
+                <header class="slip-head">
+                  <h2 class="slip-title">Заметки голосом</h2>
+                  <div class="slip-tools">
+                    <button id="btnDictToOffice" type="button" class="chip-btn" data-tip="Передать в кабинет">→ В кабинет</button>
+                    <button id="btnDictCopy" type="button" class="chip-btn" data-tip="Скопировать">Скопировать</button>
+                    <button id="btnDictClear" type="button" class="chip-btn" data-tip="Очистить">Очистить</button>
+                  </div>
+                </header>
+                <div class="slip-body slip-voice-body">
+                  <div class="rec-row">
+                    <button id="btnRecord" type="button" class="rec-btn" aria-label="Начать диктовку">
+                      <span class="rec-dot" aria-hidden="true"></span>
+                      <span id="recLabel">Диктовать</span>
+                    </button>
+                    <span id="recTimer" class="rec-timer">00:00</span>
+                    <div class="vu" aria-hidden="true">
+                      <div class="vu-bar" id="vuBar"></div>
+                    </div>
+                  </div>
+                  <p class="rec-hint" id="recHint">Загрузите модель — и диктуйте даже без интернета.</p>
+                  <div class="slip-fill">
+                    <textarea id="dictText" class="note-area scrolly" spellcheck="false" placeholder="Здесь появится ваша речь…"></textarea>
+                  </div>
+                  <div class="check-row">
+                    <label class="check"><input type="checkbox" id="chkAppend"><span class="box" aria-hidden="true"></span><span>Дописывать</span></label>
+                    <label class="check"><input type="checkbox" id="chkSentences" checked=""><span class="box" aria-hidden="true"></span><span>Оформлять предложения</span></label>
+                  </div>
+                  <div id="modelBlock" class="model-block">
+                    <div class="row-between">
+                      <span id="modelStatus" class="slip-note">Модель GigaAM не загружена (~225 МБ, один раз)</span>
+                      <span class="row-btns">
+                    <button id="btnLoadModel" type="button" class="btn btn-primary btn-sm">Загрузить</button>
+                    <button id="btnDeleteModel" type="button" class="btn btn-ghost btn-sm" hidden="">Удалить из кэша</button>
+                  </span>
+                    </div>
+                    <div id="modelProgress" class="progress" hidden="">
+                      <div class="progress-bar" id="modelBar"></div>
+                      <span class="progress-text" id="modelText"></span>
+                    </div>
+                  </div>
+                </div>
+                <footer class="slip-foot">
+                  <span class="slip-note" id="dictStatus">Движок: GigaAM (локально)</span>
+                </footer>
+              </section>
+              <section class="slip" id="slip-boxes" hidden="">
+                <header class="slip-head">
+                  <h2 class="slip-title">Ящики</h2>
+                  <span class="slip-note">текст вне черновика</span>
+                </header>
+                <div class="slip-body slip-boxes-body">
+                  <div class="box-unit">
+                    <label class="box-label" for="cnt1">Ящик 1</label>
+                    <div class="slip-fill">
+                      <textarea id="cnt1" class="note-area note-area-sm scrolly" spellcheck="false" placeholder="Ящик держит текст вне черновика"></textarea>
+                    </div>
+                    <span class="cnt-bar" id="cnt1Info"><i></i></span>
+                  </div>
+                  <div class="box-unit">
+                    <label class="box-label" for="cnt2">Ящик 2</label>
+                    <div class="slip-fill">
+                      <textarea id="cnt2" class="note-area note-area-sm scrolly" spellcheck="false" placeholder="Ящик держит текст вне черновика"></textarea>
+                    </div>
+                    <span class="cnt-bar" id="cnt2Info"><i></i></span>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </aside>
+        </div>
+        <footer class="plinth">
+          <span class="plinth-spacer"></span>
+          <div class="plinth-tools" role="toolbar" aria-label="Форматирование">
+            <span class="plinth-left">
+          <span class="plinth-cell" id="pageCount">стр: 1</span>
+          <button type="button" class="plinth-arrow" data-fmt="undo" data-tip="Отменить · Контроль+я" aria-label="Отменить">
+            <svg viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 6H5.2"></path>
+              <path d="m8.4 2.8-3.2 3.2 3.2 3.2"></path>
+            </svg>
+          </button>
+          <button type="button" class="plinth-arrow" data-fmt="redo" data-tip="Вернуть · Контроль+н" aria-label="Вернуть">
+            <svg viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 6h9.8"></path>
+              <path d="m7.6 2.8 3.2 3.2-3.2 3.2"></path>
+            </svg>
+          </button>
+          <span class="plinth-cell" id="autoSaveInfo"></span>
+            </span>
+            <button type="button" class="bubble-btn bb-b" data-fmt="bold" data-tip="Полужирный · Контроль+и"><span>Ж</span></button>
+            <button type="button" class="bubble-btn bb-i" data-fmt="italic" data-tip="Курсивный · Контроль+л"><span>К</span></button>
+            <button type="button" class="bubble-btn bb-u" data-fmt="underline" data-tip="Подчёркнутый · Контроль+г"><span>Ч</span></button>
+            <button type="button" class="bubble-btn bb-h" data-fmt="hilite" data-tip="Маркер · Контроль+↑"><span class="bb-mark">М</span></button>
+            <button type="button" class="bubble-btn bb-bm" id="btnBookmark" data-tip="Закладка и комментарий"><span class="bb-bm-glyph" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M168 32H88A24 24 0 0 0 64 56V224a8 8 0 0 0 12.24 6.78L128 199.42l51.77 31.36A8 8 0 0 0 192 224V56A24 24 0 0 0 168 32Zm8 177.11-43.76-26.53a8 8 0 0 0-8.23 0L80 209.11V56a8 8 0 0 1 8-8h80a8 8 0 0 1 8 8Z"></path></svg>
+            </span></button>
+            <span class="bubble-sep" aria-hidden="true"></span>
+            <button type="button" class="bubble-btn bb-size" data-fmt="sizeDown" data-tip="Кегль меньше · Контроль−"><span class="glyph">−</span></button>
+            <button type="button" class="bubble-btn bb-size" data-fmt="sizeUp" data-tip="Кегль больше · Контроль+"><span class="glyph">＋</span></button>
+            <span class="bubble-sep" aria-hidden="true"></span>
+            <button type="button" class="bubble-btn bb-para" data-fmt="p" data-tip="Абзац · Контроль+0"><span>Аа</span></button>
+            <button type="button" class="bubble-btn bb-h2" data-fmt="h2" data-tip="Подзаголовок верхний · Контроль+1"><span>П1</span></button>
+            <button type="button" class="bubble-btn bb-h3" data-fmt="h3" data-tip="Подзаголовок нижний · Контроль+2"><span>П2</span></button>
+            <span class="bubble-sep" aria-hidden="true"></span>
+            <div class="rn-ui" role="group" aria-label="Рукописные пометки">
+              <div class="rn-select menu-wrap">
+                <button type="button" class="rn-type-btn" id="rnTypeBtn" aria-haspopup="listbox" aria-expanded="false" data-tip="Альтернативный+выделение">
+                  <span class="rn-type-label" id="rnTypeLabel">Подчеркнуть</span>
+                  <svg class="rn-caret" viewBox="0 0 8 6" aria-hidden="true">
+                    <path d="M1 1.5 4 4.5 7 1.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"></path>
+                  </svg>
+                </button>
+                <div class="pop rn-pop" id="rnTypePop" role="listbox" aria-label="Вид пометки" hidden=""></div>
+              </div>
+              <div class="rn-select menu-wrap">
+                <button type="button" class="rn-color-btn" id="rnColorBtn" aria-haspopup="listbox" aria-expanded="false" data-tip="Цвет пометки">
+                  <span class="rn-cdot" aria-hidden="true"></span>
+                  <svg class="rn-caret" viewBox="0 0 8 6" aria-hidden="true">
+                    <path d="M1 1.5 4 4.5 7 1.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"></path>
+                  </svg>
+                </button>
+                <div class="pop rn-pop" id="rnColorPop" role="listbox" aria-label="Цвет пометки" hidden=""></div>
+              </div>
+              <button type="button" class="bubble-btn rn-clear" id="btnMarksClear" aria-label="Убрать все пометки" data-tip="Убрать все пометки">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                  <path d="m4 4 8 8"></path>
+                  <path d="m12 4-8 8"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div id="modalOverlay" class="modal-overlay" hidden="">
+      <div class="modal-card" role="dialog" aria-modal="true" tabindex="-1">
+        <div class="modal-head">
+          <b id="modalTitle">Окно</b>
+        </div>
+        <div id="modalBody" class="modal-body"></div>
+      </div>
+    </div>
+
+<script src="lib/tiptap/tiptap.bundle.js"></script>
+    <script src="lib/rough-notation/rough-notation.iife.js"></script>
+    <script type="module" src="js/common.js"></script>
+    <script type="module" src="js/handmarks.js"></script>
+    <script type="module" src="js/editor.js"></script>
+    <script type="module" src="js/ocr.js"></script>
+    <script type="module" src="js/dictate.js"></script>
+    <script type="module" src="js/features.js"></script>
+    <script type="module" src="js/gost.js"></script>
+  </body>
+</html>
